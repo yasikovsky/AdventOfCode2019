@@ -19,7 +19,9 @@ namespace Task2
             {
                 for (int verb = 0; verb < 99; verb++)
                 {
-                    intArray = InitInput();
+                    intArray = InitInput(); //C# passes arrays to functions as reference,
+                                            //so we need to "reload" the array to its original value
+                                            //every time the CalculateIntcodes function is called on it
 
                     intArray[1] = noun;
                     intArray[2] = verb;
@@ -35,6 +37,10 @@ namespace Task2
             }
         }
 
+        /// <summary>
+        /// Loads the task input from file
+        /// </summary>
+        /// <returns>Array of ints</returns>
         public static int[] InitInput()
         {
             var inputText = File.ReadAllText("../../../input");
@@ -43,7 +49,12 @@ namespace Task2
 
             return intArray;
         }
-
+        
+        /// <summary>
+        /// Do operations on an intcode array in compliance with task requirements
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Output intcode array</returns>
         public static int[] CalculateIntcodes(int[] input)
         { 
             for (int i = 0; i < input.Length; i++)
