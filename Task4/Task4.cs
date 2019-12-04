@@ -35,8 +35,6 @@ namespace Task4
 
             bool meetsCriteria = false;
 
-            var lastLargerGroup = 'a';
-
             for (int i = 1; i < stringInput.Length; i++)
             {
                 if (stringInput[i] < stringInput[i - 1])
