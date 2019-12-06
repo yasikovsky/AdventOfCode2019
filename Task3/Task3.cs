@@ -40,7 +40,7 @@ namespace Task3
             foreach (var wire in wireArray)
             {
                 int steps = 0;
-
+                
                 wireId++;
                 var currentX = 0;
                 var currentY = 0;

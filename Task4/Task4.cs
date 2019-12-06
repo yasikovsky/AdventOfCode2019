@@ -33,7 +33,7 @@ namespace Task4
         {
             var stringInput = input.ToString();
 
-            bool meetsCriteria = false;
+            bool meetsCriteria = false; 
 
             for (int i = 1; i < stringInput.Length; i++)
             {
